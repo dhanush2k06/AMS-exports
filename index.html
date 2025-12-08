@@ -72,9 +72,6 @@
             transform: translateY(-4px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
-        /* Slideshow specific styles */
-        .slideshow-item { display: none; }
-        .slideshow-item.active { display: block; }
         .review-card {
             flex: 0 0 auto;
             width: 90%;
@@ -146,50 +143,19 @@
         <!-- Home View -->
         <section id="home-view" class="pt-8">
             
-            <!-- 1. Slideshow (Hero Section - High Impact) -->
+            <!-- 1. Hero Section (Static) -->
             <section class="mb-20">
-                <div class="slideshow-container relative mx-auto container px-6 shadow-xl rounded-lg overflow-hidden">
-                    <div id="slideshow" class="h-[60vh] md:h-[80vh] relative">
-                        <!-- Slide 1: Focus on Craftsmanship (Updated with stock image) -->
-                        <div class="slideshow-item active bg-cover bg-center h-full flex items-center justify-center" style="background-image: url('media/bags_cover.jpg'); background-position: center;">
-                            <div class="text-center p-8 rounded-lg bg-black bg-opacity-30">
-                                <h2 class="text-3xl md:text-7xl font-light text-white mb-4 tracking-wider">
-                                    Timeless Elegance in Every Stitch. <br> Unleash Your Style!
-                                </h2>
-                                <p class="text-base md:text-xl text-gray-200 mb-8 font-light tracking-widest uppercase">
-                                    Discover Premium Leather Goods. <br><b>Call 9884052072 or 9884396696</b> for Exclusive Deals!
-                                </p>
-                                <a href="#products" class="btn-primary px-12 py-2 text-xl">Discover</a>
-                            </div>
+                <div class="relative mx-auto container px-6 shadow-xl rounded-lg overflow-hidden">
+                    <div class="h-[60vh] md:h-[80vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('media/bags_cover.jpg'); background-position: center;">
+                        <div class="text-center p-8 rounded-lg bg-black bg-opacity-30">
+                            <h2 class="text-3xl md:text-7xl font-light text-white mb-4 tracking-wider">
+                                Timeless Elegance in Every Stitch. <br> Unleash Your Style!
+                            </h2>
+                            <p class="text-base md:text-xl text-gray-200 mb-8 font-light tracking-widest uppercase">
+                                Discover Premium Leather Goods. <br><b>Call 9884052072 or 9884396696</b> for Exclusive Deals!
+                            </p>
+                            <a href="#products" class="btn-primary px-12 py-2 text-xl">Discover</a>
                         </div>
-                        <!-- Slide 2: Focus on Bags (Updated with stock image) -->
-                        <div class="slideshow-item bg-cover bg-center h-full flex items-center justify-start p-12 md:p-24" style="background-image: url('media/shoes_cover.jpg'); background-position: center ;">
-                            <div class="text-left bg-black bg-opacity-50 p-8 rounded-lg max-w-lg">
-                                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-                                    The Metropolitan Briefcase
-                                </h2>
-                                <p class="text-lg text-gray-200 mb-6">
-                                    Full-grain calf leather, meticulously finished in Espresso.
-                                </p>
-                                <a href="#products?category=Bags" class="btn-secondary px-8 py-3 bg-white text-primary border-primary hover:bg-gray-100">Shop Bags</a>
-                            </div>
-                        </div>
-                        <!-- Slide 3: Focus on Shoes (Updated with stock image) -->
-                        <div class="slideshow-item bg-cover bg-center h-full flex items-center justify-center" style="background-image: url('media/wallet_cover.jpg'); background-position: center;">
-                            <div class="text-center p-8 rounded-lg bg-black bg-opacity-30">
-                                <h2 class="text-5xl md:text-7xl font-light text-white mb-4 tracking-wider">
-                                    Step into Luxury. <br> Handcrafted Shoes Await!
-                                </h2>
-                                <p class="text-xl text-gray-200 mb-8 font-light tracking-widest uppercase">
-                                    Elevate Your Wardrobe. Call 9884052072 or 9884396696 for Custom Fits!
-                                </p>
-                                <a href="#products?category=Shoes" class="btn-primary px-12 py-4 text-xl">Explore Shoes</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide Indicators -->
-                    <div id="slide-indicators" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
-                        <!-- Indicators will be generated by JS -->
                     </div>
                 </div>
             </section>
@@ -690,47 +656,10 @@
             `;
         }
 
-        // --- 4. Slideshow & Review Slider Logic ---
-        let slideIndex = 0;
+        // --- 4. Review Slider Logic ---
         let reviewAutoScrollInterval;
         let leathersSlideIndex = 0;
         let leathersAutoScrollInterval;
-
-        function showSlides(n) {
-            const slides = document.querySelectorAll('.slideshow-item');
-            const indicators = document.querySelectorAll('#slide-indicators button');
-
-            if (slides.length === 0) return;
-
-            if (n >= slides.length) slideIndex = 0;
-            if (n < 0) slideIndex = slides.length - 1;
-
-            slides.forEach(s => s.classList.remove('active'));
-            indicators.forEach(i => i.classList.remove('bg-white', 'opacity-100'));
-            indicators.forEach(i => i.classList.add('bg-gray-400', 'opacity-70'));
-            
-            slides[slideIndex].classList.add('active');
-            indicators[slideIndex].classList.remove('bg-gray-400', 'opacity-70');
-            indicators[slideIndex].classList.add('bg-white', 'opacity-100');
-        }
-
-        function autoSlide() {
-            slideIndex++;
-            showSlides(slideIndex);
-            setTimeout(autoSlide, 5000); // Change image every 5 seconds
-        }
-
-        function createIndicators() {
-            const slides = document.querySelectorAll('.slideshow-item');
-            const container = document.getElementById('slide-indicators');
-            slides.forEach((_, i) => {
-                const btn = document.createElement('button');
-                btn.className = 'w-3 h-3 rounded-full bg-gray-400 opacity-70 transition duration-300';
-                btn.onclick = () => showSlides(i);
-                container.appendChild(btn);
-            });
-            showSlides(0); // Initialize first slide
-        }
 
         function renderReviews() {
             const slider = document.getElementById('review-slider');
@@ -814,8 +743,6 @@
         // --- 5. Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize dynamic components on load
-            createIndicators();
-            autoSlide();
             renderReviews();
             renderImportedLeathers();
             updateCartCount();
