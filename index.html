@@ -6,6 +6,7 @@
     <title>AMS Exports | Handcrafted Goods</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -152,13 +153,13 @@
                         <!-- Slide 1: Focus on Craftsmanship (Updated with stock image) -->
                         <div class="slideshow-item active bg-cover bg-center h-full flex items-center justify-center" style="background-image: url('media/bags_cover.jpg'); background-position: center;">
                             <div class="text-center p-8 rounded-lg bg-black bg-opacity-30">
-                                <h2 class="text-5xl md:text-7xl font-light text-white mb-4 tracking-wider">
+                                <h2 class="text-3xl md:text-7xl font-light text-white mb-4 tracking-wider">
                                     Timeless Elegance in Every Stitch. <br> Unleash Your Style!
                                 </h2>
-                                <p class="text-xl text-gray-200 mb-8 font-light tracking-widest uppercase">
-                                    Discover Premium Leather Goods. Call 9884052072 or 9884396696 for Exclusive Deals!
+                                <p class="text-base md:text-xl text-gray-200 mb-8 font-light tracking-widest uppercase">
+                                    Discover Premium Leather Goods. <br><b>Call 9884052072 or 9884396696</b> for Exclusive Deals!
                                 </p>
-                                <a href="#products" class="btn-primary px-12 py-4 text-xl">Discover</a>
+                                <a href="#products" class="btn-primary px-12 py-2 text-xl">Discover</a>
                             </div>
                         </div>
                         <!-- Slide 2: Focus on Bags (Updated with stock image) -->
@@ -298,7 +299,6 @@
                     <li><a href="#about" class="hover:text-primary transition duration-150">Our Heritage</a></li>
                     <li><a href="#products" class="hover:text-primary transition duration-150">Shop All</a></li>
                     <li><a href="#" class="hover:text-primary transition duration-150">Customer Support</a></li>
-                    <li><a href="#contact" class="hover:text-primary transition duration-150">Visit Showroom</a></li>
                 </ul>
             </div>
 
@@ -317,16 +317,16 @@
                 <h4 class="text-xl font-semibold text-white mb-4">Leave a Review</h4>
                 <p class="mb-4 text-sm">Join our newsletter for exclusive updates.</p>
                 <form id="review-form" class="space-y-3">
-                    <input type="email" placeholder="Email Address" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary">
-                    <textarea placeholder="Your Feedback" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary h-16 resize-none"></textarea>
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary">
+                    <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary">
+                    <textarea name="feedback" placeholder="Your Feedback" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary h-16 resize-none"></textarea>
                     <button type="submit" class="btn-primary w-full text-sm">Submit</button>
                     <p id="review-message" class="text-sm text-green-400 mt-2 hidden"></p>
                 </form>
                 <!-- Social Handles -->
                 <div class="flex space-x-4 text-xl mt-6">
-                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Instagram">&#x1F4F7;</a>
-                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Facebook">&#x1F4F1;</a>
-                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Pinterest">&#x1F4CD;</a>
+                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    <a href="#" class="hover:text-primary transition duration-150" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
                 </div>
             </div>
         </div>
@@ -336,6 +336,10 @@
     </footer>
 
     <script>
+        // Constants for reusable elements
+        const WHATSAPP_ICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>`;
+        const PLACEHOLDER_IMAGE = 'https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';
+
         // --- 1. Product Data and Definitions (Updated with Stock Images) ---
         const PRODUCTS = [
             // Leather Goods
@@ -343,15 +347,15 @@
             { id: 2, name: "Goat Leather Panel", price: 70, category: "Leather Goods", material: "Goat", type: "Raw", image: "media/leather_cover.jpg", description: "Soft and supple goat leather panel, ideal for versatile leather projects. Known for its flexibility and rich texture." },
             { id: 3, name: "Sheepskin Lining Fabric", price: 60, category: "Leather Goods", material: "Sheep", type: "Raw", image: "media/leather_cover.jpg", description: "Luxurious sheepskin lining fabric, providing warmth and comfort. Excellent for interior linings and accessories." },
             // Bags
-            { id: 4, name: "Metropolitan Briefcase", price: 349, category: "Bags", type: "Briefcases", material: "Calf", image: "media/Men/bags/laptop_bag1.jpg", description: "Elegant calf leather briefcase designed for the modern professional. Features multiple compartments, padded laptop sleeve, and premium hardware." },
-            { id: 5, name: "The Explorer Duffle", price: 289, category: "Bags", type: "Duffle bags", material: "Cow", image: "media/Men/bags/duffle_bags.jpg", description: "Rugged cow leather duffle bag built for adventure. Spacious interior with reinforced straps and weather-resistant finish." },
-            { id: 6, name: "Sleek Cross-body", price: 169, category: "Bags", type: "Cross-body bags", material: "Goat", image: "media/Men/bags/crossbody_bags.jpg", description: "Stylish goat leather cross-body bag with adjustable strap. Perfect for everyday carry with secure zippered compartments." },
-            { id: 15, name: "Laptop Bag", price: 199, category: "Bags", type: "Laptop bags", material: "Cow", image: "media/Men/bags/laptop_bag2.jpg", description: "Professional cow leather laptop bag with dedicated padding. Features organized pockets and sleek design for business travel." },
-            { id: 16, name: "iPad Bag", price: 149, category: "Bags", type: "iPad bags", material: "Goat", image: "media/Men/bags/laptop_bag3.jpg", description: "Compact goat leather iPad bag with soft interior lining. Ideal for protecting and carrying your tablet with style." },
-            { id: 17, name: "Sling Bag", price: 129, category: "Bags", type: "Sling bags", material: "Sheep", image: "media/Men/bags/sling_bag1.jpg", description: "Casual sheep leather sling bag with cross-body strap. Features multiple compartments for essentials and comfortable wear." },
+            { id: 4, name: "Metropolitan Briefcase", price: 349, category: "Bags", type: "Briefcases", material: "Calf", image: "media/Men/bags/laptop_bag1.jpg", sizeChart: "media/officebag_sizechart.jpg", description: "Elegant calf leather briefcase designed for the modern professional. Features multiple compartments, padded laptop sleeve, and premium hardware." },
+            { id: 5, name: "The Explorer Duffle", price: 289, category: "Bags", type: "Duffle bags", material: "Cow", image: "media/Men/bags/duffle_bags.jpg", sizeChart: "media/duffle_bag_sizechart.jpg", description: "Rugged cow leather duffle bag built for adventure. Spacious interior with reinforced straps and weather-resistant finish." },
+            { id: 6, name: "Sleek Cross-body", price: 169, category: "Bags", type: "Cross-body bags", material: "Goat", image: "media/Men/bags/crossbody_bags.jpg", sizeChart: "media/crossbodybag_sizechart.jpg", description: "Stylish goat leather cross-body bag with adjustable strap. Perfect for everyday carry with secure zippered compartments." },
+            { id: 15, name: "Laptop Bag", price: 199, category: "Bags", type: "Laptop bags", material: "Cow", image: "media/Men/bags/laptop_bag2.jpg", sizeChart: "media/laptopbag_sizechart.jpg", description: "Professional cow leather laptop bag with dedicated padding. Features organized pockets and sleek design for business travel." },
+            { id: 16, name: "iPad Bag", price: 149, category: "Bags", type: "iPad bags", material: "Goat", image: "media/Men/bags/laptop_bag3.jpg", sizeChart: "media/laptopbag_sizechart.jpg", description: "Compact goat leather iPad bag with soft interior lining. Ideal for protecting and carrying your tablet with style." },
+            { id: 17, name: "Sling Bag", price: 129, category: "Bags", type: "Sling bags", material: "Sheep", image: "media/Men/bags/sling_bag1.jpg", sizeChart: "media/wmens_slingbag_sizechart.jpg", description: "Casual sheep leather sling bag with cross-body strap. Features multiple compartments for essentials and comfortable wear." },
             // Wallets
-            { id: 7, name: "Executive Card Holder", price: 45, category: "Wallets", type: "Card Holder", material: "Cow", image: "media/Men/wallets/wallet_men1.jpg", description: "Slim cow leather card holder with RFID protection. Holds up to 8 cards with a sleek, minimalist design." },
-            { id: 8, name: "Classic Bifold Wallet", price: 79, category: "Wallets", type: "Bifold", material: "Calf", image: "media/Women/wallets/wallet_women3.jpg", description: "Timeless calf leather bifold wallet with multiple card slots and bill compartments. Crafted for durability and style." },
+            { id: 7, name: "Executive Card Holder", price: 45, category: "Wallets", type: "Card Holder", material: "Cow", image: "media/Men/wallets/wallet_men1.jpg", sizeChart: "media/mens_wallet_sizechart.jpg", description: "Slim cow leather card holder with RFID protection. Holds up to 8 cards with a sleek, minimalist design." },
+            { id: 8, name: "Classic Bifold Wallet", price: 79, category: "Wallets", type: "Bifold", material: "Calf", image: "media/Women/wallets/wallet_women3.jpg", sizeChart: "media/mens_wallet_sizechart.jpg", description: "Timeless calf leather bifold wallet with multiple card slots and bill compartments. Crafted for durability and style." },
             // Shoes
             { id: 9, name: "Hand-Stitched Oxford", price: 299, category: "Shoes", type: "Oxfords", material: "Calf", image: "media/Men/shoes/shoes_men1.jpg", description: "Hand-stitched calf leather Oxford shoes with Goodyear welt construction. Features lace-up design and premium comfort." },
             { id: 10, name: "The Brogue Wingtip", price: 319, category: "Shoes", type: "Brogues", material: "Cow", image: "media/Men/shoes/shoes_men2.jpg", description: "Classic cow leather brogue wingtip shoes with perforated detailing. Perfect for formal occasions with lasting quality." },
@@ -366,8 +370,8 @@
             { id: 23, name: "Burnished Finished Belt", price: 92, category: "Belts", type: "Burnished", material: "Goat", image: "media/Men/belts/belt.jpg", description: "Goat leather belt with burnished edges and polished buckle. Offers a refined, handcrafted appearance." },
             { id: 24, name: "Plain Smooth Finish Belt", price: 78, category: "Belts", type: "Plain Smooth", material: "Sheep", image: "media/Men/belts/belt.jpg", description: "Sheep leather belt with plain smooth finish and simple buckle. Clean, minimalist design for everyday use." },
             // More Products
-            { id: 13, name: "Travel Passport Wallet", price: 85, category: "Wallets", type: "Travel", material: "Goat", image: "media/Women/wallets/wallet_women6.jpg", description: "Compact goat leather passport wallet with secure compartments. Perfect for travel with RFID blocking technology." },
-            { id: 14, name: "Ladies Mini Clutch", price: 129, category: "Bags", type: "Clutch", material: "Sheep", image: "media/Women/handbags/handbag5.jpg", description: "Elegant sheep leather mini clutch with magnetic closure. Features interior pockets and detachable strap." },
+            { id: 13, name: "Travel Passport Wallet", price: 85, category: "Wallets", type: "Travel", material: "Goat", image: "media/Women/wallets/wallet_women6.jpg", sizeChart: "media/mens_wallet_sizechart.jpg", description: "Compact goat leather passport wallet with secure compartments. Perfect for travel with RFID blocking technology." },
+            { id: 14, name: "Ladies Mini Clutch", price: 129, category: "Bags", type: "Clutch", material: "Sheep", image: "media/Women/handbags/handbag5.jpg", sizeChart: "media/ladies_wallet_sizechart.jpg", description: "Elegant sheep leather mini clutch with magnetic closure. Features interior pockets and detachable strap." },
         ];
 
         const REVIEWS = [
@@ -379,9 +383,9 @@
         ];
 
         const IMPORTED_LEATHERS = [
-            { name: "Cow Leather", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Cow leather." },
-            { name: "Goat Leather", image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Goat leather." },
-            { name: "Sheep Leather", image: "https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Sheep leather." }
+            { name: "Cow Leather", image: "media/cow_leather.jpg", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Cow leather." },
+            { name: "Goat Leather", image: "media/goat_leather.jpg", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Goat leather." },
+            { name: "Sheep Leather", image: "media/sheep_leather.webp", description: "Leather Goods imported from Europe, Argentina, Brazil (depending on the customer's order the size and bundle may vary). Sheep leather." }
         ];
 
         // --- 2. Cart Management (using LocalStorage) ---
@@ -538,19 +542,25 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
         document.getElementById('product-count').textContent = `${filteredProducts.length} Products`;
         document.getElementById('products-grid').innerHTML = filteredProducts.map(p => `
             <div class="product-card bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
-                <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';" class="w-full h-auto rounded-sm mb-4 object-cover border border-gray-50 aspect-square">
+                <div class="relative mb-4">
+<div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
+                        ${p.sizeChart ? `<img src="${p.sizeChart}" alt="${p.name} Size Chart" class="w-full h-full object-cover hidden" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">` : ''}
+                    </div>
+                    ${p.sizeChart ? `<div id="product-nav-${p.id}" class="flex justify-center mt-2 space-x-1">
+                        <button onclick="showProductSlide(${p.id}, 0)" class="w-2 h-2 rounded-full bg-primary transition duration-300"></button>
+                        <button onclick="showProductSlide(${p.id}, 1)" class="w-2 h-2 rounded-full bg-gray-400 transition duration-300"></button>
+                    </div>` : ''}
+                </div>
                 <div class="flex-grow">
                     <p class="text-xs text-primary font-bold uppercase mb-1 tracking-widest">${p.category}</p>
                     <h4 class="text-xl font-bold truncate mb-1">${p.name}</h4>
-                    <p class="text-sm text-gray-500 mb-4">${p.material} Leather</p>
                 </div>
                 <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                     <button onclick="openProductDetails(${p.id})" class="btn-secondary px-4 py-2 text-sm">View Details</button>
                     <div class="flex space-x-2">
                         <button onclick="openPriceForm(${p.id})" class="btn-primary px-4 py-2 text-sm flex items-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                            </svg>
+                            ${WHATSAPP_ICON.replace('<svg', '<svg class="w-4 h-4"')}
                             <span>Check the Price</span>
                         </button>
                         <button onclick="addToCart(${p.id})" class="btn-secondary px-4 py-2 text-sm">Add to Cart</button>
@@ -569,19 +579,25 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${filteredProducts.map(p => `
                     <div class="product-card bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
-                        <img src="${p.image}" alt="${p.name}" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';" class="w-full h-auto rounded-sm mb-4 object-cover border border-gray-50 aspect-square">
+                        <div class="relative mb-4">
+<div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
+                        ${p.sizeChart ? `<img src="${p.sizeChart}" alt="${p.name} Size Chart" class="w-full h-full object-cover hidden" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">` : ''}
+                    </div>
+                            ${p.sizeChart ? `<div id="product-nav-${p.id}" class="flex justify-center mt-2 space-x-1">
+                                <button onclick="showProductSlide(${p.id}, 0)" class="w-2 h-2 rounded-full bg-primary transition duration-300"></button>
+                                <button onclick="showProductSlide(${p.id}, 1)" class="w-2 h-2 rounded-full bg-gray-400 transition duration-300"></button>
+                            </div>` : ''}
+                        </div>
                         <div class="flex-grow">
                             <p class="text-xs text-primary font-bold uppercase mb-1 tracking-widest">${p.category}</p>
                             <h4 class="text-xl font-bold truncate mb-1">${p.name}</h4>
-                            <p class="text-sm text-gray-500 mb-4">${p.material} Leather</p>
                         </div>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                             <button onclick="openProductDetails(${p.id})" class="btn-secondary px-4 py-2 text-sm">View Details</button>
                             <div class="flex space-x-2">
                                 <button onclick="openPriceForm(${p.id})" class="btn-primary px-4 py-2 text-sm flex items-center space-x-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                                    </svg>
+                                    ${WHATSAPP_ICON.replace('<svg', '<svg class="w-4 h-4"')}
                                     <span>Check the Price</span>
                                 </button>
                                 <button onclick="addToCart(${p.id})" class="btn-secondary px-4 py-2 text-sm">Add to Cart</button>
@@ -615,14 +631,12 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             let cartItemsHTML = cart.map(item => `
                 <div class="flex flex-col md:flex-row items-start md:items-center justify-between border-b py-6 hover:bg-gray-50 transition duration-150 rounded-sm px-2 -mx-2">
                     <div class="flex items-center space-x-6 w-full md:w-3/5 mb-4 md:mb-0">
-                        <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded-sm border border-gray-100">
+                        <img src="${item.image}" alt="${item.name}" class="w-24 h-24 object-cover rounded-sm border border-gray-100" onclick="magnifyImage(this.src)">
                         <div>
                             <h4 class="font-semibold text-xl">${item.name}</h4>
                             <p class="text-sm text-gray-500">${item.material} Leather | ${item.type}</p>
-                            <button onclick="openPriceForm(${item.id})" class="btn-primary px-2 py-1 text-xs flex items-center space-x-1 mt-1 md:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                                </svg>
+                        <button onclick="openPriceForm(${item.id})" class="btn-primary px-2 py-1 text-xs flex items-center space-x-1 mt-1 md:hidden">
+                                ${WHATSAPP_ICON.replace('<svg', '<svg class="w-3 h-3"')}
                                 <span>Check Price</span>
                             </button>
                         </div>
@@ -630,9 +644,7 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                     
                     <div class="flex items-center justify-between md:justify-end w-full md:w-2/5">
                         <button onclick="openPriceForm(${item.id})" class="btn-primary px-2 py-1 text-xs flex items-center space-x-1 hidden md:block">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                            </svg>
+                            ${WHATSAPP_ICON.replace('<svg', '<svg class="w-3 h-3"')}
                             <span>Check Price</span>
                         </button>
 
@@ -672,9 +684,7 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                                 </div>
                             </div>
                             <button ${cart.length === 0 ? 'disabled' : ''} onclick="openCartPriceForm()" class="btn-primary w-full py-4 text-lg ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''} flex items-center justify-center space-x-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                                </svg>
+                                ${WHATSAPP_ICON.replace('<svg', '<svg class="w-5 h-5"')}
                                 <span>Check Prices via WhatsApp</span>
                             </button>
                             ${cart.length > 0 ? `<button onclick="clearCart()" class="w-full mt-4 text-sm text-gray-500 hover:text-red-500 transition duration-150">Empty Bag</button>` : ''}
@@ -786,16 +796,16 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             if (!slideshow) return;
 
             slideshow.innerHTML = IMPORTED_LEATHERS.map((leather, index) => `
-                <div class="slideshow-item ${index === 0 ? 'active' : ''} h-full flex items-center">
-                    <div class="w-1/2 h-full">
+                <div class="slideshow-item ${index === 0 ? 'active' : ''} h-full flex flex-col md:flex-row items-center">
+                    <div class="w-full md:w-1/2 h-1/2 md:h-full">
                         <img src="${leather.image}" alt="${leather.name}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/4A3222/ffffff?text=Image+Missing';">
                     </div>
-                    <div class="w-1/2 flex items-center justify-center p-12 bg-white">
+                    <div class="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12 bg-white h-1/2 md:h-full">
                         <div class="text-center">
-                            <h2 class="text-4xl md:text-6xl font-light text-primary mb-4 tracking-wider">
+                            <h2 class="text-2xl md:text-4xl font-light text-primary mb-4 tracking-wider">
                                 ${leather.name}
                             </h2>
-                            <p class="text-xl text-gray-600 mb-8 font-light">
+                            <p class="text-sm md:text-lg text-gray-600 mb-8 font-light">
                                 ${leather.description}
                             </p>
                         </div>
@@ -862,6 +872,9 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             showLeathersSlides(0); // Initialize first slide
         }
 
+        // Initialize EmailJS
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+
         // --- 5. Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize dynamic components on load
@@ -885,13 +898,26 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 e.preventDefault();
                 const messageEl = document.getElementById('review-message');
                 messageEl.classList.remove('hidden');
-                messageEl.textContent = "Thank you! Your feedback has been received.";
-                messageEl.classList.add('text-green-400');
 
-                setTimeout(() => {
-                    messageEl.classList.add('hidden');
-                    e.target.reset();
-                }, 4000);
+                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#review-form')
+                    .then((result) => {
+                        console.log('Success:', result.text);
+                        messageEl.textContent = "Thank you! Your feedback has been sent successfully.";
+                        messageEl.classList.add('text-green-400');
+                        messageEl.classList.remove('text-red-400');
+                        e.target.reset();
+                        setTimeout(() => {
+                            messageEl.classList.add('hidden');
+                        }, 4000);
+                    }, (error) => {
+                        console.log('Failed:', error.text);
+                        messageEl.textContent = "Sorry, there was an error sending your feedback. Please try again.";
+                        messageEl.classList.add('text-red-400');
+                        messageEl.classList.remove('text-green-400');
+                        setTimeout(() => {
+                            messageEl.classList.add('hidden');
+                        }, 4000);
+                    });
             });
 
             // Form submission for WhatsApp
@@ -946,27 +972,95 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
         }
 
         // --- Product Details Modal Functions ---
+        let detailsSlideIndex = 0;
+
         function openProductDetails(productId) {
             const product = PRODUCTS.find(p => p.id === productId);
             if (product) {
                 document.getElementById('details-title').textContent = product.name;
-                document.getElementById('details-image').src = product.image;
                 document.getElementById('details-category').textContent = product.category;
-                document.getElementById('details-material').textContent = `${product.material} Leather`;
+                document.getElementById('details-material').textContent = `${product.material} | ${product.type}`;
                 document.getElementById('details-description').textContent = product.description;
                 document.getElementById('details-product-id').value = productId;
+
+                // Generate slideshow images
+                const images = [product.image];
+                if (product.sizeChart) images.push(product.sizeChart);
+
+                document.getElementById('details-slideshow').innerHTML = images.map((img, index) => `
+                    <img src="${img}" alt="${product.name}" class="w-full h-full object-cover ${index === 0 ? '' : 'hidden'}" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
+                `).join('');
+
+                // Generate navigation
+                document.getElementById('details-nav').innerHTML = images.map((_, index) => `
+                    <button onclick="showDetailsSlide(${index})" class="w-3 h-3 rounded-full transition duration-300 ${index === 0 ? 'bg-white' : 'bg-gray-400'}"></button>
+                `).join('');
+
+                detailsSlideIndex = 0;
                 document.getElementById('product-details-modal').classList.remove('hidden');
             }
+        }
+
+        function showDetailsSlide(n) {
+            const slides = document.querySelectorAll('#details-slideshow img');
+            const navs = document.querySelectorAll('#details-nav button');
+
+            if (slides.length === 0) return;
+
+            if (n >= slides.length) detailsSlideIndex = 0;
+            else if (n < 0) detailsSlideIndex = slides.length - 1;
+            else detailsSlideIndex = n;
+
+            slides.forEach(s => s.classList.add('hidden'));
+            navs.forEach(b => b.classList.remove('bg-white').classList.add('bg-gray-400'));
+
+            slides[detailsSlideIndex].classList.remove('hidden');
+            navs[detailsSlideIndex].classList.remove('bg-gray-400').classList.add('bg-white');
         }
 
         function closeProductDetailsModal() {
             document.getElementById('product-details-modal').classList.add('hidden');
         }
+
+        // --- Product Slideshow Functions ---
+        function showProductSlide(productId, slideIndex) {
+            const slideshow = document.getElementById(`product-slideshow-${productId}`);
+            const images = slideshow.querySelectorAll('img');
+            const navButtons = document.querySelectorAll(`#product-nav-${productId} button`);
+
+            if (images.length === 0) return;
+
+            // Hide all images
+            images.forEach(img => img.classList.add('hidden'));
+            // Show the selected image
+            images[slideIndex].classList.remove('hidden');
+
+            // Update nav buttons
+            navButtons.forEach((btn, index) => {
+                if (index === slideIndex) {
+                    btn.classList.remove('bg-gray-400');
+                    btn.classList.add('bg-primary');
+                } else {
+                    btn.classList.remove('bg-primary');
+                    btn.classList.add('bg-gray-400');
+                }
+            });
+        }
+
+        // --- Image Magnification Functions ---
+        function magnifyImage(src) {
+            document.getElementById('magnified-image').src = src;
+            document.getElementById('magnify-modal').classList.remove('hidden');
+        }
+
+        function closeMagnifyModal() {
+            document.getElementById('magnify-modal').classList.add('hidden');
+        }
     </script>
 
     <!-- Price Check Modal -->
     <div id="price-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-lg w-full mx-4">
+        <div class="bg-white p-8 rounded-lg shadow-2xl max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto">
             <h3 class="text-2xl font-semibold mb-6 text-primary">Check the Price</h3>
             <img id="product-image" src="" alt="Product Image" class="w-full h-48 object-cover rounded-sm mb-6" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
             <form id="price-form">
@@ -977,7 +1071,7 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block font-medium mb-2 text-sm uppercase tracking-wider">Email</label>
-                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-sm focus:ring-primary focus:border-primary transition duration-150">
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-sm focus:ring-primary focus:border-primary transition duration-150">
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="block font-medium mb-2 text-sm uppercase tracking-wider">Phone</label>
@@ -990,9 +1084,7 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 <div class="flex justify-end space-x-3">
                     <button type="button" onclick="closeModal()" class="btn-secondary py-2 px-4 text-sm">Cancel</button>
                     <button type="submit" class="btn-primary py-2 px-4 text-sm flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                        </svg>
+                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
                         <span>Send via WhatsApp</span>
                     </button>
                 </div>
@@ -1008,7 +1100,15 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 <button onclick="closeProductDetailsModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <img id="details-image" src="" alt="Product Image" class="w-full h-64 object-cover rounded-sm" onerror="this.onerror=null; this.src='https://placehold.co/600x400/4A3222/ffffff?text=Image+Missing';">
+                <div class="relative">
+                    <div id="details-slideshow" class="relative h-64 rounded-sm overflow-hidden">
+                        <!-- Slides will be generated by JS -->
+                    </div>
+                    <!-- Slideshow Navigation -->
+                    <div id="details-nav" class="flex justify-center mt-4 space-x-2">
+                        <!-- Navigation buttons will be generated by JS -->
+                    </div>
+                </div>
                 <div>
                     <p id="details-category" class="text-sm text-primary font-bold uppercase mb-2"></p>
                     <p id="details-material" class="text-sm text-gray-600 mb-4"></p>
@@ -1018,10 +1118,19 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                         <button onclick="openPriceForm(document.getElementById('details-product-id').value); closeProductDetailsModal()" class="btn-secondary px-6 py-3">Check Price</button>
                     </div>
                 </div>
+                <input type="hidden" id="details-product-id">
             </div>
-            <input type="hidden" id="details-product-id">
+        </div>
+    </div>
+
+    <!-- Image Magnify Modal -->
+    <div id="magnify-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-50">
+        <div class="relative max-w-4xl max-h-[90vh]">
+            <img id="magnified-image" src="" alt="Magnified Image" class="max-w-full max-h-full object-contain">
+            <button onclick="closeMagnifyModal()" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300">&times;</button>
         </div>
     </div>
 </body>
-</html>
+</html>             
+
 
