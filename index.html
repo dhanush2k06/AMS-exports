@@ -101,7 +101,7 @@
             <nav class="hidden md:flex space-x-10 text-base font-medium tracking-wide">
                 <a href="#about" class="hover:text-primary transition duration-150">About</a>
                 <a href="#products" class="hover:text-primary transition duration-150">Products</a>
-                <a href="#reviews" class="hover:text-primary transition duration-150">Review</a>
+
                 <a href="#contact" class="hover:text-primary transition duration-150">Contact Us</a>
             </nav>
 
@@ -285,7 +285,7 @@
 
     <!-- Footer (Dark, Rich, and Formal) -->
     <footer class="bg-[#1c1c1c] text-gray-400 py-12 mt-auto border-t border-gray-800" id="contact">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
             <!-- Brand Info -->
             <div>
                 <h4 class="text-2xl font-extrabold text-white mb-4 tracking-widest uppercase" style="font-family: 'Playfair Display', serif;">AMS</h4>
@@ -312,22 +312,24 @@
                 </ul>
             </div>
 
-            <!-- Newsletter/Review Input -->
+            <!-- Social Handles -->
             <div>
-                <h4 class="text-xl font-semibold text-white mb-4">Leave a Review</h4>
-                <p class="mb-4 text-sm">Join our newsletter for exclusive updates.</p>
-                <form id="review-form" class="space-y-3">
-                    <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary">
-                    <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary">
-                    <textarea name="feedback" placeholder="Your Feedback" required class="w-full p-3 rounded-sm bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-1 focus:ring-primary h-16 resize-none"></textarea>
-                    <button type="submit" class="btn-primary w-full text-sm">Submit</button>
-                    <p id="review-message" class="text-sm text-green-400 mt-2 hidden"></p>
-                </form>
-                <!-- Social Handles -->
-                <div class="flex space-x-4 text-xl mt-6">
+                <h4 class="text-xl font-semibold text-white mb-4">Follow Us</h4>
+                <div class="flex space-x-4 text-xl">
                     <a href="#" class="hover:text-primary transition duration-150" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
                     <a href="#" class="hover:text-primary transition duration-150" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
                 </div>
+            </div>
+
+            <!-- Leave a Review -->
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-4">Leave a Review</h4>
+                <form id="review-form" class="space-y-3">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 bg-gray-800 border border-gray-600 rounded-sm text-white placeholder-gray-400 focus:ring-primary focus:border-primary">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 bg-gray-800 border border-gray-600 rounded-sm text-white placeholder-gray-400 focus:ring-primary focus:border-primary">
+                    <textarea name="message" placeholder="Your Review" required class="w-full p-2 bg-gray-800 border border-gray-600 rounded-sm text-white placeholder-gray-400 focus:ring-primary focus:border-primary h-20 resize-none"></textarea>
+                    <button type="submit" class="btn-primary w-full py-2 text-sm">Submit Review</button>
+                </form>
             </div>
         </div>
         <div class="text-center mt-10 pt-6 border-t border-gray-800">
@@ -517,8 +519,8 @@
             }
         }
 
-// --- Products View Logic ---
-function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = false) {
+        // --- Products View Logic ---
+        function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = false) {
     const container = document.getElementById('products-view');
     let searchTerm = '';
 
@@ -541,9 +543,9 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
         // Update only the product count and grid
         document.getElementById('product-count').textContent = `${filteredProducts.length} Products`;
         document.getElementById('products-grid').innerHTML = filteredProducts.map(p => `
-            <div class="product-card bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
+            <div class="product-card bg-white p-4 md:p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
                 <div class="relative mb-4">
-<div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
+                    <div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
                         <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
                         ${p.sizeChart ? `<img src="${p.sizeChart}" alt="${p.name} Size Chart" class="w-full h-full object-cover hidden" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">` : ''}
                     </div>
@@ -554,16 +556,16 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 </div>
                 <div class="flex-grow">
                     <p class="text-xs text-primary font-bold uppercase mb-1 tracking-widest">${p.category}</p>
-                    <h4 class="text-xl font-bold truncate mb-1">${p.name}</h4>
+                    <h4 class="text-lg md:text-xl font-bold truncate mb-1">${p.name}</h4>
                 </div>
-                <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-                    <button onclick="openProductDetails(${p.id})" class="btn-secondary px-4 py-2 text-sm">View Details</button>
-                    <div class="flex space-x-2">
-                        <button onclick="openPriceForm(${p.id})" class="btn-primary px-4 py-2 text-sm flex items-center space-x-2">
-                            ${WHATSAPP_ICON.replace('<svg', '<svg class="w-4 h-4"')}
-                            <span>Check the Price</span>
+                <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center pt-4 border-t border-gray-100 space-y-2 sm:space-y-0">
+                    <button onclick="openProductDetails(${p.id})" class="btn-secondary px-3 py-2 text-xs sm:text-sm">View Details</button>
+                    <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                        <button onclick="openPriceForm(${p.id})" class="btn-primary px-3 py-2 text-xs sm:text-sm flex items-center justify-center space-x-1">
+                            ${WHATSAPP_ICON.replace('<svg', '<svg class="w-3 h-3 sm:w-4 sm:h-4"')}
+                            <span>Check Price</span>
                         </button>
-                        <button onclick="addToCart(${p.id})" class="btn-secondary px-4 py-2 text-sm">Add to Cart</button>
+                        <button onclick="addToCart(${p.id})" class="btn-secondary px-3 py-2 text-xs sm:text-sm">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -571,19 +573,19 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
     } else {
         // Full render
         container.innerHTML = `
-            <h2 class="text-5xl font-light text-primary mb-8 text-center tracking-widest">AMS COLLECTIONS</h2>
+            <h2 class="text-4xl md:text-5xl font-light text-primary mb-8 text-center tracking-widest">AMS COLLECTIONS</h2>
             <div class="mb-8 flex justify-center">
                 <input type="text" id="product-search" placeholder="Search products by name, category, or material..." value="${searchTerm}" class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200">
             </div>
             <p id="product-count" class="text-center text-gray-600 mb-6">${filteredProducts.length} Products</p>
-            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                 ${filteredProducts.map(p => `
-                    <div class="product-card bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
+                    <div class="product-card bg-white p-4 md:p-6 rounded-lg shadow-lg flex flex-col justify-between border border-gray-100">
                         <div class="relative mb-4">
-<div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
-                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
-                        ${p.sizeChart ? `<img src="${p.sizeChart}" alt="${p.name} Size Chart" class="w-full h-full object-cover hidden" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">` : ''}
-                    </div>
+                            <div id="product-slideshow-${p.id}" class="relative h-48 rounded-sm overflow-hidden">
+                                <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">
+                                ${p.sizeChart ? `<img src="${p.sizeChart}" alt="${p.name} Size Chart" class="w-full h-full object-cover hidden" onclick="magnifyImage(this.src)" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A3222/ffffff?text=Image+Missing';">` : ''}
+                            </div>
                             ${p.sizeChart ? `<div id="product-nav-${p.id}" class="flex justify-center mt-2 space-x-1">
                                 <button onclick="showProductSlide(${p.id}, 0)" class="w-2 h-2 rounded-full bg-primary transition duration-300"></button>
                                 <button onclick="showProductSlide(${p.id}, 1)" class="w-2 h-2 rounded-full bg-gray-400 transition duration-300"></button>
@@ -591,16 +593,16 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                         </div>
                         <div class="flex-grow">
                             <p class="text-xs text-primary font-bold uppercase mb-1 tracking-widest">${p.category}</p>
-                            <h4 class="text-xl font-bold truncate mb-1">${p.name}</h4>
+                            <h4 class="text-lg md:text-xl font-bold truncate mb-1">${p.name}</h4>
                         </div>
-                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-                            <button onclick="openProductDetails(${p.id})" class="btn-secondary px-4 py-2 text-sm">View Details</button>
-                            <div class="flex space-x-2">
-                                <button onclick="openPriceForm(${p.id})" class="btn-primary px-4 py-2 text-sm flex items-center space-x-2">
-                                    ${WHATSAPP_ICON.replace('<svg', '<svg class="w-4 h-4"')}
-                                    <span>Check the Price</span>
+                        <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center pt-4 border-t border-gray-100 space-y-2 sm:space-y-0">
+                            <button onclick="openProductDetails(${p.id})" class="btn-secondary px-3 py-2 text-xs sm:text-sm">View Details</button>
+                            <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+                                <button onclick="openPriceForm(${p.id})" class="btn-primary px-3 py-2 text-xs sm:text-sm flex items-center justify-center space-x-1">
+                                    ${WHATSAPP_ICON.replace('<svg', '<svg class="w-3 h-3 sm:w-4 sm:h-4"')}
+                                    <span>Check Price</span>
                                 </button>
-                                <button onclick="addToCart(${p.id})" class="btn-secondary px-4 py-2 text-sm">Add to Cart</button>
+                                <button onclick="addToCart(${p.id})" class="btn-secondary px-3 py-2 text-xs sm:text-sm">Add to Cart</button>
                             </div>
                         </div>
                     </div>
@@ -872,9 +874,6 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             showLeathersSlides(0); // Initialize first slide
         }
 
-        // Initialize EmailJS
-        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
-
         // --- 5. Initialization ---
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize dynamic components on load
@@ -892,33 +891,6 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
             // SPA Routing
             window.addEventListener('hashchange', router);
             router();
-
-            // Footer Review Form
-            document.getElementById('review-form').addEventListener('submit', (e) => {
-                e.preventDefault();
-                const messageEl = document.getElementById('review-message');
-                messageEl.classList.remove('hidden');
-
-                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#review-form')
-                    .then((result) => {
-                        console.log('Success:', result.text);
-                        messageEl.textContent = "Thank you! Your feedback has been sent successfully.";
-                        messageEl.classList.add('text-green-400');
-                        messageEl.classList.remove('text-red-400');
-                        e.target.reset();
-                        setTimeout(() => {
-                            messageEl.classList.add('hidden');
-                        }, 4000);
-                    }, (error) => {
-                        console.log('Failed:', error.text);
-                        messageEl.textContent = "Sorry, there was an error sending your feedback. Please try again.";
-                        messageEl.classList.add('text-red-400');
-                        messageEl.classList.remove('text-green-400');
-                        setTimeout(() => {
-                            messageEl.classList.add('hidden');
-                        }, 4000);
-                    });
-            });
 
             // Form submission for WhatsApp
             document.getElementById('price-form').addEventListener('submit', (e) => {
@@ -944,6 +916,22 @@ function renderProductsView(hash, overrideSearchTerm = null, updateOnlyGrid = fa
                 window.open(url, '_blank');
 
                 closeModal();
+                e.target.reset();
+            });
+
+            // Form submission for Review
+            document.getElementById('review-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = e.target.elements.name.value;
+                const email = e.target.elements.email.value;
+                const message = e.target.elements.message.value;
+
+                const subject = 'New Review from AMS Website';
+                const body = `Name: ${name}\nEmail: ${email}\nReview: ${message}`;
+                const mailto = `mailto:dhanushharidoss47@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                window.location.href = mailto;
+                showToast('Review submitted! Your email client has opened.', 'success');
                 e.target.reset();
             });
         });
